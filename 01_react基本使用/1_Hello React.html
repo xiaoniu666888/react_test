@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 根节点 -->
+    <div id="root"></div>
+    <!-- 引入依赖 -->
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/babel.js"></script>
+
+    <script type="text/babel">
+        class App extends React.Component {
+            constructor() {
+                super()
+                this.state = {
+                    message: 'Hello World'
+                }
+            }
+            btnClick() {
+                this.setState({
+                    message: "Hello React"
+                })
+            }
+            render() {
+                return (
+                    <div>
+                        <h3>{this.state.message}</h3>
+                        <button onClick={this.btnClick.bind(this)}>点击修改</button>
+                    </div>
+                )
+
+
+            }
+        }
+        // 1. 定义变量
+        const message = "Hello Word"
+        // 2. 渲染内容
+        const root = ReactDOM.createRoot(document.querySelector("#root"))
+        root.render(<App />)
+    </script>
+</body>
+
+</html>
