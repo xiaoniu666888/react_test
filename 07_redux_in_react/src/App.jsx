@@ -3,6 +3,8 @@ import React, { PureComponent } from 'react'
 import Home from './pages/Home'
 import Profile from './pages/Profile'
 import store from '../src/store'
+import About from './pages/About'
+import Category from './pages/Category'
 export class App extends PureComponent {
   constructor() {
     super()
@@ -27,6 +29,10 @@ export class App extends PureComponent {
         <Home />
         <hr />
         <Profile />
+        <hr />
+        <About />
+        <hr />
+        <Category />
       </div>
 
     )
