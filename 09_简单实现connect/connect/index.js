@@ -12,8 +12,8 @@ function connect(mapStateToProps, mapDispatchToProps) {
             }
             render() {
                 const stateObj = mapStateToProps(store.getState())
-                const diapatchObj = mapDispatchToProps(store.dispatch)
-                return <WrapCompontent {...this.props} {...stateObj} {...diapatchObj} />
+                const dispatchObj = mapDispatchToProps(store.dispatch)
+                return <WrapCompontent {...this.props} {...stateObj} {...dispatchObj} />
             }
         }
         return NewCompontent
